@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Siddhardha Roy Mogilicharla</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Siddhardha</div>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Got a project or question? Let’s connect!</p>
+        <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="contact-info">
+            📧 mogilicharlasiddhardharoy@gmail.com <br> 📞 9182408621 <br> 📍 Maisammaguda, Hyderabad, Telangana, India
+        </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert("Message sent successfully!");
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert("Failed to send message. Try again.");
+                });
+        });
+    </script>
+    <!-- Social Media Section -->
+    <section class="social-media">
+        <h2>Connect with me</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/siddhardha-roy-mogilicharla-442784279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Siddhu9876" target="_blank">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6f61;
+    /* Coral or peach shade */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffb347;
+    /* Warm orange */
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* General Body Styling */
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+
+/* Skills Section */
+
+.skills-section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skills-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* Category Heading */
+
+.category h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-left: 5px solid #ff7f50;
+    padding-left: 10px;
+}
+
+
+/* Grid Layout for Skills */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 50px;
+    margin-bottom: 2rem;
+}
+
+
+/* Each Individual Skill */
+
+.skill {
+    padding: 10px;
+    text-align: center;
+    box-shadow: none;
+    transition: transform 0.3s ease-in-out;
+    perspective: 500px;
+    /* Add perspective for the 3D effect */
+}
+
+
+/* 3D Ball Shape Effect for Logos */
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    /* This makes the logo circular */
+    background: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    /* Ensure 3D transformations are applied */
+}
+
+
+/* Hover Animation to Create 3D Ball Effect */
+
+.skill:hover img {
+    transform: rotateY(15deg) rotateX(15deg);
+    /* Rotate on X and Y axes to simulate 3D ball effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* Add a subtle shadow for depth */
+}
+
+
+/* Skill Label */
+
+.skill span {
+    display: block;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+
+/* Active Link Style */
+
+nav a.active {
+    color: #ff7f50;
+    font-weight: bold;
+}

@@ -1,0 +1,135 @@
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ff5722;
+    /* Accent color */
+}
+
+
+/* Project Section */
+
+.projects {
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.projects h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* Project Cards */
+
+.project-card {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.project-card img {
+    flex: 1 1 300px;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.project-content {
+    flex: 2 1 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff7043;
+}
+
+.project-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.tech-stack {
+    font-size: 14px;
+    color: #bbb;
+    background-color: #2b2b2b;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+    .project-card img {
+        width: 100%;
+        max-height: 250px;
+    }
+    .project-content {
+        padding: 15px;
+    }
+}
